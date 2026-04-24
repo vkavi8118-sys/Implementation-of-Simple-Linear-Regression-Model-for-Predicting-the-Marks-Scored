@@ -9,7 +9,9 @@ To write a program to predict the marks scored by a student using the simple lin
 
 ## Algorithm
 1.Input the data points (X: study hours, Y: marks) and compute their means.
+
 2.Calculate slope m using covariance and variance.
+
 3.Compute intercept c=
 Y
 ˉ
@@ -17,6 +19,7 @@ Y
 X
 ˉ
 .
+
 4.Predict marks using Y=mX+c.
 
 ## Program:
