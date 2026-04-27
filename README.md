@@ -26,47 +26,41 @@ X
 ```
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)  
+Y = np.array([35, 40, 50, 55, 65])           
+model = LinearRegression()
+model.fit(X, Y)
+print("Slope (m):", model.coef_[0])
+print("Intercept (c):", model.intercept_)
 
-X = np.array(list(map(float, input().split())))
-Y = np.array(list(map(float, input().split())))
+Y_pred = model.predict(X)
 
-Xmean = np.mean(X)
-Ymean = np.mean(Y)
+hours = np.array([[6]])
+predicted_marks = model.predict(hours)
+print("Predicted marks for 6 hours of study:", predicted_marks[0])
+mse = mean_squared_error(Y, Y_pred)
+r2 = r2_score(Y, Y_pred)
 
-num = np.sum((X - Xmean)*(Y - Ymean))
-den = np.sum((X - Xmean)**2)
-
-m = num / den
-c = Ymean - m * Xmean
-
-print("Slope (m):", m)
-print("Intercept (c):", c)
-
-Y_pred = m * X + c
-print("Predicted Marks:", Y_pred)
-
-x_new = float(input("Enter study hours to predict marks: "))
-y_new = m * x_new + c
-print("Predicted marks for given input:", y_new)
-
-sorted_indices = np.argsort(X)
-
-plt.scatter(X, Y)
-plt.plot(X[sorted_indices], Y_pred[sorted_indices], color="red")
-plt.xlabel("Study Hours")
+print("Mean Squared Error:", mse)
+print("R2 Score:", r2)
+plt.scatter(X, Y, color='blue', label='Actual Data')
+plt.plot(X, Y_pred, color='red', label='Regression Line')
+plt.xlabel("Hours Studied")
 plt.ylabel("Marks Scored")
-plt.title("Simple Linear Regression")
+plt.title("Simple Linear Regression Model")
+plt.legend()
 plt.show()
-
 Developed by: Kavinaya V
 RegisterNumber: 212225230133 
 
 ```
 
 ## Output:
-<img width="818" height="680" alt="Screenshot 2026-04-24 144058" src="https://github.com/user-attachments/assets/b25fea1f-187e-429e-bd44-9fec48fd0005" />
-<img width="874" height="372" alt="Screenshot 2026-04-24 144114" src="https://github.com/user-attachments/assets/ca320910-d17d-48c2-8940-0e560d58d067" />
-<img width="873" height="701" alt="Screenshot 2026-04-24 144125" src="https://github.com/user-attachments/assets/b7dbb88a-9c58-4ff4-a9af-12b56715593d" />
+<img width="1920" height="1080" alt="Screenshot (173)" src="https://github.com/user-attachments/assets/c90e28c4-6c3a-409c-bb9f-f406959b6ac7" />
+<img width="1920" height="1080" alt="Screenshot (177)" src="https://github.com/user-attachments/assets/2592d546-b218-47ab-8dae-a9bbf7bed601" />
+
 
 
 ## Result:
