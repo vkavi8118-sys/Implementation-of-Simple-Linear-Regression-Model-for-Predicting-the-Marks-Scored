@@ -58,10 +58,8 @@ RegisterNumber: 212225230133
 ```
 
 ## Output:
-<img width="1920" height="1080" alt="Screenshot (173)" src="https://github.com/user-attachments/assets/c90e28c4-6c3a-409c-bb9f-f406959b6ac7" />
-<img width="1920" height="1080" alt="Screenshot (177)" src="https://github.com/user-attachments/assets/2592d546-b218-47ab-8dae-a9bbf7bed601" />
-
-
+<img width="581" height="141" alt="Screenshot 2026-04-27 161339" src="https://github.com/user-attachments/assets/804f7d08-aeef-4497-804e-0a5c9f6ae973" />
+<img width="863" height="693" alt="Screenshot 2026-04-27 161353" src="https://github.com/user-attachments/assets/55b5ed42-1c8a-4312-a655-048517606612" />
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
